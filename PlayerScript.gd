@@ -28,7 +28,7 @@ func get_input(delta):
 	velocity = move_and_slide(velocity, Vector2.UP)
 	
 	if is_on_floor():
-		velocity.x*=0.95
+		velocity.x*=0.90
 	
 	if position.y > 400: 
 		position.y= -400
