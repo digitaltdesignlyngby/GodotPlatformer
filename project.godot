@@ -10,9 +10,13 @@ config_version=4
 
 [application]
 
-config/name="PlatformerAndrewHoffman"
+config/name="GodotPlatformer"
 run/main_scene="res://Level1.tscn"
 config/icon="res://icon.png"
+
+[autoload]
+
+Globals="*res://globals.gd"
 
 [gui]
 
