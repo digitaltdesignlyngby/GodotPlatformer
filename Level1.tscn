@@ -1,8 +1,9 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://Jungle_terrain.png" type="Texture" id=1]
 [ext_resource path="res://Player.tscn" type="PackedScene" id=2]
 [ext_resource path="res://GUI.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Enemy.tscn" type="PackedScene" id=4]
 
 [sub_resource type="ConvexPolygonShape2D" id=2]
 points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
@@ -159,3 +160,15 @@ current = true
 
 [node name="GUI" parent="." instance=ExtResource( 3 )]
 position = Vector2( 47, -307 )
+
+[node name="Enemy" parent="." instance=ExtResource( 4 )]
+position = Vector2( 339, -309 )
+
+[node name="Enemy2" parent="." instance=ExtResource( 4 )]
+position = Vector2( 681, -252 )
+
+[node name="Enemy3" parent="." instance=ExtResource( 4 )]
+position = Vector2( 529, -392 )
+
+[node name="Enemy4" parent="." instance=ExtResource( 4 )]
+position = Vector2( 200, -143 )
