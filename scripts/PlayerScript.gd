@@ -26,13 +26,13 @@ func guiInputs(delta):
 	#is_action_just_pressed... betyder kun en gang 
 	if (Globals.up 		|| Input.is_action_just_pressed("ui_up"))	&& is_on_floor(): 
 		velocity.y -=jump_speed
-	if Globals.left 	|| Input.is_action_pressed("ui_left")  		&& is_on_floor():
+	if (Globals.left 	|| Input.is_action_pressed("ui_left"))  	&& is_on_floor():
 		velocity.x -= speed
 		directionLeft = true
-	if Globals.right 	|| Input.is_action_pressed("ui_right")		 && is_on_floor():
+	if (Globals.right 	|| Input.is_action_pressed("ui_right"))		 && is_on_floor():
 		velocity.x += speed
 		directionLeft = false	
-	if Globals.shoot 	|| Input.is_action_just_pressed("shoot"):
+	if (Globals.shoot 	|| Input.is_action_just_pressed("shoot")):
 		Globals.shoot = false
 		var b = bullet.instance() ## MEGET VIGTIGT instance() HVIS EXPORT!!!
 		b.position.x = position.x
