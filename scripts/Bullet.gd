@@ -17,11 +17,10 @@ func _on_Bullet_body_entered(body):
 
 
 func _on_Bullet_body_entered(body):
-	if !body.is_in_group("PlayerGroup") && !body.is_in_group("MapGroup"):
-		body.queue_free()
-		queue_free()
 	if body.is_in_group("MapGroup"):
 		queue_free()
-	
+	if body.is_in_group("EnemyGroup"):
+		queue_free()
+		body.queue_free()
 	#print("OMG A HIT!")
 	pass # Replace with function body.

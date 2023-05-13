@@ -1,4 +1,4 @@
-extends "res://PlayerScript.gd"
+extends "res://scripts/PlayerScript.gd"
 
 func _ready():
 	speed = 10

@@ -7,7 +7,7 @@ var velocity = Vector2()
 var acceleration = Vector2()
 
 var directionLeft = true #Dette er kun for kunne se hvilken retning vi skal skyde
-var bullet = preload("res://Bullet.tscn")
+var bullet = preload("res://scenes/Bullet.tscn")
 
 
 
