@@ -5,11 +5,51 @@
 [node name="GUI" type="Node2D"]
 script = ExtResource( 2 )
 
-[node name="Button" type="Button" parent="."]
+[node name="CAMERA" type="Button" parent="."]
 margin_left = 15.0
 margin_top = 18.0
 margin_right = 141.0
 margin_bottom = 58.0
 text = "switch camera"
 
-[connection signal="button_down" from="Button" to="." method="_on_Button_button_down"]
+[node name="SHOOT" type="Button" parent="."]
+margin_left = 749.0
+margin_top = 479.0
+margin_right = 860.0
+margin_bottom = 530.0
+rect_pivot_offset = Vector2( 48, 19 )
+text = "SHOOT"
+
+[node name="UP" type="Button" parent="."]
+margin_left = 751.0
+margin_top = 408.0
+margin_right = 862.0
+margin_bottom = 459.0
+rect_pivot_offset = Vector2( 48, 19 )
+text = "UP"
+
+[node name="LEFT" type="Button" parent="."]
+margin_left = 620.0
+margin_top = 480.0
+margin_right = 731.0
+margin_bottom = 531.0
+rect_pivot_offset = Vector2( 48, 19 )
+text = "LEFT"
+
+[node name="RIGHT" type="Button" parent="."]
+margin_left = 875.0
+margin_top = 479.0
+margin_right = 986.0
+margin_bottom = 530.0
+rect_pivot_offset = Vector2( 48, 19 )
+text = "RIGHT"
+
+[connection signal="button_down" from="CAMERA" to="." method="_on_Button_button_down"]
+[connection signal="button_down" from="SHOOT" to="." method="_on_SHOOT_button_down"]
+[connection signal="button_up" from="SHOOT" to="." method="_on_SHOOT_button_up"]
+[connection signal="button_down" from="UP" to="." method="_on_UP_button_down"]
+[connection signal="button_up" from="UP" to="." method="_on_UP_button_up"]
+[connection signal="button_down" from="LEFT" to="." method="_on_LEFT_button_down"]
+[connection signal="button_up" from="LEFT" to="." method="_on_LEFT_button_up"]
+[connection signal="button_down" from="RIGHT" to="." method="_on_RIGHT_button_down"]
+[connection signal="button_up" from="RIGHT" to="." method="_on_RIGHT_button_up"]

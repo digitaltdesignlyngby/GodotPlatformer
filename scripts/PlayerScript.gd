@@ -9,12 +9,15 @@ var acceleration = Vector2()
 var directionLeft = true #Dette er kun for kunne se hvilken retning vi skal skyde
 var bullet = preload("res://scenes/Bullet.tscn")
 
-
+func _ready():
+	
+	pass
 
 #This is a fuction for player movement 
 func get_input(delta):
 	#mouseInputs(delta)
 	keyInputs(delta)
+	guiInputs(delta)
 	updateAll(delta)
 	pass
 
@@ -68,6 +71,22 @@ func mouseInputs(delta):
 			if directionLeft : b.speed *= -1
 			get_parent().add_child(b)
 		
+func guiInputs(delta):
+	if Globals.up && is_on_floor():
+		velocity.y -=jump_speed
+	if Globals.left && is_on_floor():
+		velocity.x -= speed
+		directionLeft = true
+	if Globals.right && is_on_floor():
+		velocity.x += speed
+		directionLeft = false	
+	if Globals.shoot:
+		Globals.shoot = false
+		var b = bullet.instance() ## MEGET VIGTIGT instance() HVIS EXPORT!!!
+		b.position.x = position.x
+		b.position.y = position.y
+		if directionLeft : b.speed *= -1
+		get_parent().add_child(b)
 	
 func keyInputs(delta):	
 	if Input.is_action_pressed("ui_right") && is_on_floor():

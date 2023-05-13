@@ -1,20 +1,5 @@
 extends Node2D
 
-# Declare member variables here. Examples:
-# var a = 2
-# var b = "text"
-
-
-# Called when the node enters the scene tree for the first time.
-func _ready():
-	pass # Replace with function body.
-
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-#func _process(delta):
-#	pass
-
-
 func _on_Button_button_down():
 	if !Globals.cameraPlayer:
 		Globals.cameraPlayer  = true
@@ -35,4 +20,37 @@ func _on_Button_button_down():
 		cameraNode.current    = true
 		return
 		
+	pass # Replace with function body.
+
+
+func _on_UP_button_down():
+	Globals.up = true
+	pass # Replace with function body.
+
+func _on_UP_button_up():
+	Globals.up = false
+	pass # Replace with function body.
+
+func _on_LEFT_button_down():
+	Globals.left = true
+	pass # Replace with function body.
+
+func _on_LEFT_button_up():
+	Globals.left = false
+	pass # Replace with function body.
+
+func _on_RIGHT_button_down():
+	Globals.right = true
+	pass # Replace with function body.
+	
+func _on_RIGHT_button_up():
+	Globals.right = false
+	pass # Replace with function body.
+
+func _on_SHOOT_button_down():
+	Globals.shoot = true
+	pass # Replace with function body.
+
+func _on_SHOOT_button_up():
+	Globals.shoot = false
 	pass # Replace with function body.
