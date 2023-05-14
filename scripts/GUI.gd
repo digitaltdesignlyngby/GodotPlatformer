@@ -54,3 +54,14 @@ func _on_SHOOT_button_down():
 func _on_SHOOT_button_up():
 	Globals.shoot = false
 	pass # Replace with function body.
+	
+func _input(event):
+	if event.is_action_pressed("shoot"):	Globals.shoot	= true;
+	if event.is_action_released("shoot"):	Globals.shoot 	= false;
+	if event.is_action_pressed("ui_up"):	Globals.up		= true;
+	if event.is_action_released("ui_up"):	Globals.up		= false;
+	if event.is_action_pressed("ui_right"):	Globals.right	= true;
+	if event.is_action_released("ui_right"):Globals.right	= false;
+	if event.is_action_pressed("ui_left"):	Globals.left	= true;
+	if event.is_action_released("ui_left"):	Globals.left	= false;
+	pass
