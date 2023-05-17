@@ -12,11 +12,16 @@ config_version=4
 
 config/name="GodotPlatformer"
 run/main_scene="res://scenes/Level1.tscn"
+boot_splash/fullsize=false
 config/icon="res://icon.png"
 
 [autoload]
 
 Globals="*res://scripts/globals.gd"
+
+[display]
+
+window/stretch/mode="viewport"
 
 [gui]
 
